@@ -11,7 +11,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="hamBerger" class="under-line">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="submenuBar">
+      <button id="X">X</button> 
+      <div id= submenuButton>
+        <button id="business">Business</button>
+        <button id="entertainment">Entertainment</button>
+        <button id="general">General</button>
+        <button id="health">Health</button>
+        <button id="science">Science</button>
+        <button id="sports">Sports</button>
+        <button id="technology">Technology</button>
+      </div>
+ 
+    </div>
+    
+
     <section class="container">
+      <div>
+      <button class="searchButton" onclick="OnOf()">
+        <img src="/검색.png">
+      </button>
+      <div class="search" id="input-bar">
+        <input id="search-input" placeholder="여기에 검색하세요">
+        <button class="gumButton" onclick="getNewsByKeyWord()">검색</button>
+    </div>
+  </div>
       <section>
         <div class="head-line">
           <svg viewBox="0 0 184 25" fill="#000">
@@ -21,25 +50,17 @@
           </svg>
         </div>
         <div class="menus">
-            <button id="sport">Sport</button>
-            <button id="tech">Tech</button>
-            <button id="world">World</button>
-            <button id="finance">Finance</button>
-            <button id="politics">Politics</button>
             <button id="business">Business</button>
-            <button id="economics">Economics</button>
             <button id="entertainment">Entertainment</button>
-            <button id="beauty">Beauty</button>
-            <button id="travel">Travel</button>
-            <button id="music">Music</button>
-            <button id="food">Food</button>
+            <button id="general">General</button>
+            <button id="health">Health</button>
             <button id="science">Science</button>
-            <button id="gaming">Gaming</button>
-            <button id="energy">Energy</button>
+            <button id="sports">Sports</button>
+            <button id="technology">Technology</button>
         </div>
       </section>
       <section id="news-board">
-
+        
       </section>
     </section>
 

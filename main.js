@@ -1,21 +1,27 @@
 const apiKey = `fa80bc1d486a4ac3b407ca0ee368b453`
 let COUNTRY = "us"
-let query = ""
+let CateGory = ""
 let topButton = document.querySelectorAll(".menus button")
 let newsList = []
+let category = ''
+let searchBar = document.getElementById("input-bar")
+let hamBerger = document.getElementById("hamBerger")
+let submenuBar = document.getElementById("submenuBar")
+let exit = document.getElementById("X")
 
 topButton.forEach((menu)=>
     menu.addEventListener("click",(event)=>{
         if(event){
-            query = event.target.id
+            category  = "&category="
+            CateGory = event.target.id
         }
-        console.log(query)
+        console.log(CateGory)
         getLatestNews()
     }))
 
 const getLatestNews = async()=>{ // async: 동기함수로 만들기 (await으로 기다리게 만들수 있음)
 
-    const url = new URL(`https://newsapi.org/v2/top-headlines?q=${query}&country=${COUNTRY}&apiKey=${apiKey}`) // URL: 인스턴스, 미리 필요한걸 해주는거
+    const url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=${COUNTRY}&apiKey=${apiKey}${category}${CateGory}`) // URL: 인스턴스, 미리 필요한걸 해주는거
 
     console.log("wow",url)
 
@@ -45,13 +51,11 @@ const render = () =>{
 const overTwoH = (news)=> {
     let arr = ""
     arr = news.description
-    if(arr.length > 200){
-        arr = arr.substring(0,200) + "..."
-        return arr
-    } else if(arr.length <= 0){
-        arr = "내용없음"
-        return arr
-    } else {
+    if(arr == null || arr == ""){
+        return arr = "내용없음"
+    } else if (arr.length > 200){
+        return arr.substring(0,200) + "..."
+    } else{
         return arr
     }
 }
@@ -69,8 +73,16 @@ const coolTime = (news) => {
     let date = moment(news.publishedAt.substring(0,10),"YYYYMMDD").fromNow()
     let hour = moment(news.publishedAt.substring(11,19),"h:mm:ss").fromNow()
 
-    return date +"  " + hour
+    return date[0]+date[1] +"days  "+ hour
 }
 getLatestNews()
 
-
+const OnOf= () => {
+    if(searchBar.style.display == "inline"){
+        searchBar.style.display = "none" 
+    } else{
+        searchBar.style.display = "inline"
+    }
+}
+hamBerger.addEventListener("click",()=>submenuBar.style.left = "0%")
+exit.addEventListener("click",()=>submenuBar.style.left = "-100%")
