@@ -99,14 +99,14 @@
     transition: 0.3s;
 }
 #submenuBar #X{
-    position: relative;
+    position: fixed;
     top: 2.5%;
     left: 75%;
     transition: 0.3s;
     font-weight: bold;
     border: none;
     background-color: rgb(134, 186, 207);
-    font-size: 38px;
+    font-size: 32px;
 
 }
 #submenuButton button{
