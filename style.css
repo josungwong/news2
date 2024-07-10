@@ -1,0 +1,37 @@
+.head-line{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+.head-line svg{
+    width: 430px;
+}
+.menus{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 4px double black;
+}
+.menus button{
+    border: none;
+    background: none;
+    margin: 5px;
+    transition: 0.3s;
+}
+.menus button:hover{
+    background-color: black;
+    color: yellow;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.news-img-size{
+    max-width: 100%;
+    max-height: 250px;
+}
+.news{
+    border-bottom: 2px solid black;
+    margin-top: 1em;
+
+}
