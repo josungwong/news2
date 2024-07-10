@@ -82,7 +82,7 @@
     transition: 0.3s;
 }
 #submenuBar{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     height: 100vh;
@@ -99,9 +99,9 @@
     transition: 0.3s;
 }
 #submenuBar #X{
-    position: fixed;
+    position: relative;
     top: 2.5%;
-    left: 75%;
+    left: 70%;
     transition: 0.3s;
     font-weight: bold;
     border: none;
@@ -113,12 +113,12 @@
     margin: 2vh;
     border: none;
     background-color: rgb(134, 186, 207);
-    transition: 0.3s;
+    transition: 0.5s;
     font-size: 20px;
 }
-#submenuButton button:active{
+#submenuButton button:hover, #submenuButton button:active{
     transform: scale(1.2);
-    transition: 0.3s;
+    transition: 0.5s;
     background-color: rgb(186, 218, 6);
 }
 
