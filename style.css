@@ -66,7 +66,7 @@
 .searchButton{
     position: absolute;
     top: 1vh;
-    left: 17.5vw;
+    left: 15vw;
     border: none;
     width: 2.1em;
     height: 2.1em;
@@ -123,13 +123,19 @@
 }
 
 @media screen and (max-width:62rem) {
+    .search{
+        left: 55%;
+    }
     #search-input{
-        display: none;
+        margin-top: 0.5vh;
+        width: 140px;
     }
     .gumButton{
-        display: none;
+        margin-top: 0.5vh;
+        width: 50px;
     }
     .head-line{
+        
         margin-top: 4em;
     }
     .menus{
@@ -140,7 +146,7 @@
     }
     .searchButton{
         top: 1.3vh;
-        left: 14vw;
+        left: 90%;
     }
     .under-line{
         position: absolute;
