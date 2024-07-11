@@ -4,7 +4,8 @@ let CateGory = ""
 let topButton = document.querySelectorAll(".menus button")
 let newsList = []
 let category = ''
-let searchBar = document.getElementById("input-bar")
+let searchBar = document.getElementById("search-input")
+let gumSax = document.getElementById("gumSax")
 let hamBerger = document.getElementById("hamBerger")
 let submenuBar = document.getElementById("submenuBar")
 let exit = document.getElementById("X")
@@ -80,8 +81,10 @@ getLatestNews()
 const OnOf= () => {
     if(searchBar.style.display == "inline"){
         searchBar.style.display = "none" 
+        gumSax.style.display = "none" 
     } else{
         searchBar.style.display = "inline"
+        gumSax.style.display = "inline"
     }
 }
 hamBerger.addEventListener("click",()=>submenuBar.style.left = "0%")
