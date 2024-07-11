@@ -124,7 +124,7 @@
 
 @media screen and (max-width:62rem) {
     .search{
-        left: 55%;
+        left: 35vw;
     }
     #search-input{
         margin-top: 0.5vh;
@@ -145,13 +145,14 @@
         display: none;
     }
     .searchButton{
-        top: 1.3vh;
-        left: 90%;
+        position: relative;
+        top: -5.8vh;
+        left: 88%;
     }
     .under-line{
         position: absolute;
         top: 1.3vh;
-        left: 5vw;
+        left: 7vw;
     }
     .under-line div{
         border-bottom: 5px solid black;
