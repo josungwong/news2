@@ -64,9 +64,6 @@
     transition: 0.3s;
 }
 .searchButton{
-    position: absolute;
-    top: 1vh;
-    left: 15vw;
     border: none;
     width: 2.1em;
     height: 2.1em;
@@ -127,11 +124,9 @@
         left: 35vw;
     }
     #search-input{
-        margin-top: 0.5vh;
         width: 140px;
     }
     .gumButton{
-        margin-top: 0.5vh;
         width: 50px;
     }
     .head-line{
@@ -143,11 +138,6 @@
     }
     .menus button{
         display: none;
-    }
-    .searchButton{
-        position: relative;
-        top: -5.8vh;
-        left: 88%;
     }
     .under-line{
         position: absolute;
